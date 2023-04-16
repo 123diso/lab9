@@ -1,4 +1,3 @@
-// Obtener el modal
 let modal = document.getElementById("modal-comment");
 
 // Obtener el botón que abre el modal
@@ -12,6 +11,11 @@ let commentForm = document.getElementById("comment-form");
 
 // Obtener la lista de comentarios
 let commentList = document.getElementById("comment-list");
+
+
+let submitBtn = document.getElementById("submit-btn");
+let commentField = document.getElementById("comment");
+
 
 // Cuando se haga clic en el botón, abrir el modal
 btn.onclick = function() {
@@ -29,6 +33,23 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+// Cuando se escriba en el cuadro de comentarios
+commentField.addEventListener("input", function() {
+    // Si el cuadro de comentarios tiene contenido, habilitar el botón y cambiar el color
+    if (commentField.value.trim() !== "") {
+      submitBtn.disabled = false;
+      submitBtn.classList.add("active");
+    }
+    // De lo contrario, deshabilitar el botón y volver al color original
+    else {
+      submitBtn.disabled = true;
+      submitBtn.classList.remove("active");
+    }
+  });
+  
+
 
 // Cuando se envíe el formulario de comentarios
 commentForm.addEventListener("submit", function(event) {
