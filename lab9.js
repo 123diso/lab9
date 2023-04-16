@@ -1,17 +1,17 @@
 // Obtener el modal
-var modal = document.getElementById("modal-comment");
+let modal = document.getElementById("modal-comment");
 
 // Obtener el botón que abre el modal
-var btn = document.getElementById("btn-comment");
+let btn = document.getElementById("btn-comment");
 
 // Obtener el botón de cerrar
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // Obtener el formulario de comentarios
-var commentForm = document.getElementById("comment-form");
+let commentForm = document.getElementById("comment-form");
 
 // Obtener la lista de comentarios
-var commentList = document.getElementById("comment-list");
+let commentList = document.getElementById("comment-list");
 
 // Cuando se haga clic en el botón, abrir el modal
 btn.onclick = function() {
